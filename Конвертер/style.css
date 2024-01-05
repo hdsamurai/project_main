@@ -1,0 +1,157 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 18px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+input::-ms-clear{
+  display: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#e66465, #9198e5);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.subject{
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.wrapper{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.seill{
+    padding: 20px;
+    background-color: #ccc;
+    border-radius: 4px;
+    text-align: center;
+    background: blue;
+    transition: all .2s linear;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.course {
+    background-color: green;
+}
+
+.seill-7{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    background: #934343;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.seill-2:focus{
+    transform: scale(1.05);
+    background: #bb4646;
+}
+
+.currency{
+    color: #fff;
+    font-size: 18px;
+}
+
+/*Slider*/
+::-webkit-scrollbar {
+  width: 4px; /* ширина для вертикального скролла */
+  height: auto; /* высота для горизонтального скролла */
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 2px;
+}
+
+
+option{
+    font-size: 14px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.course-item-value{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+input{
+    font-size: 22px;
+    color: #fff;
+}
+
+input::placeholder{
+    color: #fff;
+    font-size: 22px;
+    opacity: 0.7;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+

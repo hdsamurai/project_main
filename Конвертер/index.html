@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер валют</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="subject">Конвертор</h1>
+        <div class="wrapper">
+            <select name="currency" class="currency seill seill-1"></select>
+            <input class="seill seill-2" type="number" name="" id="num" placeholder="Ввод">
+            <div class="seill seill-3 course">
+                <p class="course-item-title">Курс USD</p>
+                <p class="course-item-value" data-value="USD">--.--</p>
+            </div>
+
+            <select name="currency" class="currency seill seill-4"></select>
+            <input class="seill seill-5" type="text" name="" id="ans" placeholder="Вывод" disabled>
+            <div class="seill seill-6 course">
+                <p class="course-item-title">Курс EUR</p>
+                <p class="course-item-value" data-value="EUR">--.--</p>
+            </div>
+
+            <button class="btn seill seill-7" id="btn">Конвертировать</button>
+            <div class="seill seill-8 course">
+                <p class="course-item-title">Курс GBP</p>
+                <p class="course-item-value" data-value="GBP">--.--</p>
+            </div>  
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
