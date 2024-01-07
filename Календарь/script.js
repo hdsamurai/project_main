@@ -210,7 +210,7 @@ function gotoDate() {
       return;
     }
   }
-  alert("Invalid Date");
+  alert("Неверная дата");
 }
 
 //function get active day day name and date and update eventday eventdate
@@ -245,7 +245,7 @@ function updateEvents(date) {
   });
   if (events === "") {
     events = `<div class="no-event">
-            <h3>No Events</h3>
+            <h3>Нет событий</h3>
         </div>`;
   }
   eventsContainer.innerHTML = events;
@@ -317,7 +317,7 @@ addEventSubmit.addEventListener("click", () => {
   const eventTimeFrom = addEventFrom.value;
   const eventTimeTo = addEventTo.value;
   if (eventTitle === "" || eventTimeFrom === "" || eventTimeTo === "") {
-    alert("Please fill all the fields");
+    alert("Пожалуйста, заполните все поля");
     return;
   }
 
@@ -332,7 +332,7 @@ addEventSubmit.addEventListener("click", () => {
     timeToArr[0] > 23 ||
     timeToArr[1] > 59
   ) {
-    alert("Invalid Time Format");
+    alert("Недопустимый формат времени");
     return;
   }
 
@@ -355,7 +355,7 @@ addEventSubmit.addEventListener("click", () => {
     }
   });
   if (eventExist) {
-    alert("Event already added");
+    alert("Событие уже добавлено");
     return;
   }
   const newEvent = {
@@ -403,7 +403,7 @@ addEventSubmit.addEventListener("click", () => {
 //function to delete event when clicked on event
 eventsContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("event")) {
-    if (confirm("Are you sure you want to delete this event?")) {
+    if (confirm("Вы уверены, что хотите удалить это событие?")) {
       const eventTitle = e.target.children[0].children[1].innerHTML;
       eventsArr.forEach((event) => {
         if (
@@ -451,8 +451,8 @@ function convertTime(time) {
   let timeArr = time.split(":");
   let timeHour = timeArr[0];
   let timeMin = timeArr[1];
-  let timeFormat = timeHour >= 12 ? "PM" : "AM";
-  timeHour = timeHour % 12 || 12;
+  let timeFormat = timeHour >= 24 ? "PM" : "AM";
+  timeHour = timeHour % 24 || 24;
   time = timeHour + ":" + timeMin + " " + timeFormat;
   return time;
 }
